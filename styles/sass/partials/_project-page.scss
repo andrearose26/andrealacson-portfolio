@@ -1,0 +1,26 @@
+ .project-page .hero{
+
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background-image: none;
+     margin-bottom: 25px;
+     .page-title {
+         font-size: 3rem;
+         font-family: $header-font;
+         margin-bottom: 15px;
+     }
+}
+
+.diverse-lit p,
+.bowser-bash p,
+.shoe-kloset p {
+    margin-bottom: 15px
+}
+
+
+.project-image,
+.project-description {
+    margin-bottom: 35px;
+}
