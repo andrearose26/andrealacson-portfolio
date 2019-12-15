@@ -610,6 +610,16 @@ textarea {
   }
 }
 
+.back-to-top {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.back-to-top a {
+  color: #D90368;
+}
+
 footer {
   background-color: #0a1b4a;
 }
@@ -750,7 +760,8 @@ footer .wrapper {
 
 .diverse-lit p,
 .bowser-bash p,
-.shoe-kloset p {
+.shoe-kloset p,
+.gif-me-a-movie p {
   margin-bottom: 15px;
 }
 
