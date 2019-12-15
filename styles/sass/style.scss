@@ -1,0 +1,71 @@
+@import 'partials/normalize';
+@import 'partials/variables';
+@import 'partials/header';
+@import 'partials/skills';
+@import 'partials/projects';
+@import 'partials/contact';
+@import 'partials/footer';
+@import 'partials/about-page';
+@import 'partials/project-page';
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    // font-family: $base-font;
+    font-family: $tag-font;
+    font-size: 1.8rem;
+}
+
+.wrapper {
+    width:75%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, 
+h2,
+h3,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 100%;
+}
+
+.highlight-pink {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #f1f2f4 50%);
+}
+
+.highlight-blue {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #38d2d5 50%);
+}
+
+.section-title {
+    margin: 25px auto;
+    display: inline-block;
+    border-bottom:1px solid black;
+    padding: 10px;
+    font-family: $header-font;
+}
+
+.skills,
+.all-projects,
+.contact {
+    display: flex;
+    flex-direction: column;
+}

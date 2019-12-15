@@ -1,0 +1,89 @@
+ .about-page .hero{
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $header-font;
+    font-size: 3rem;
+}
+
+.about-section .wrapper{
+    display: flex;
+    margin: 75px auto 50px auto;
+    padding: 25px;
+    height: auto;
+    align-items: center;
+}
+
+.about-image {
+    width: 30%;
+    margin-right: 50px;
+
+    img {
+            width: 100%
+        }
+}
+        
+.about-text {
+    width: 70%;
+    background-color: rgba($color: $pink, $alpha: 0.8);
+    color: white;
+    padding: 20px 25px;
+
+    h2,
+    h3 {
+        font-family: $header-font;
+        margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+.resume-section {
+    display: flex;
+    justify-content: center;
+
+    button {
+        border: none;
+        padding: 10px 15px;
+        background: $pink;
+    }
+    
+    a {
+        color: white;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .about-image {
+        width: 40%;
+    }
+
+    .about-text {
+        width: 60%;
+    }
+}
+
+@media (max-width: 775px) {
+
+    .about-image {
+        width: 50%;
+        margin-bottom: 25px;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+    .about-section .wrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 675px){
+    .about-image {
+        width: 100%;
+    }
+}

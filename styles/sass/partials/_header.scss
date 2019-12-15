@@ -1,0 +1,93 @@
+// NAV STYLES
+.site-title {
+    font-family: $header-font;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            padding: 0 15px;
+        }
+
+        li:last-of-type {
+            padding-right: 0;
+        }
+
+        a {
+            color: black;
+        }
+    }
+}
+
+// HERO STYLES
+
+.hero {
+    background-image: url(../assets/background.png);
+    background-size: cover;
+    
+    .wrapper {
+        height: 90vh;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+}
+
+.hero-text {
+    background: rgba($color: white, $alpha: 1);
+    font-weight: normal;
+    width: 70%;
+    
+    h3 {
+        font-family: $header-font;
+        margin-bottom: 15px;
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+}
+
+.hero-image {
+    margin-right: 100px;
+}
+
+@media(max-width: 615px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+            margin-top: 15px;
+        }
+
+        ul li:first-child {
+            padding-left: 0;
+        }
+    }
+
+    .hero .wrapper {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .hero-image {
+        margin: 35px 0;
+        width: 61%;
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: center;
+    }
+}

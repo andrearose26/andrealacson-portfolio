@@ -1,0 +1,70 @@
+// SKILLS STYLES
+.skills-list {
+    background: rgba($color: $navy, $alpha: 1);
+    padding: 80px 60px;
+    margin-top: 50px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.skills .section-title {
+    text-align: center;
+    font-family: $header-font;
+    font-size: 3.5rem;
+}
+
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    li {
+        width: 20%;
+        margin: 0 auto;
+        padding: 25px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    i {
+        color: white;
+        font-size: 7rem;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    p {
+        width: 100%;
+    }
+}
+
+@media(max-width: 1080px) {
+    .skills-list {
+
+        padding: 50px 30px;
+
+        li {
+            padding: 15px;
+            width: 125px;
+        }
+    }
+}
+
+@media (max-width: 475px) {
+    .skills-list {
+
+        li {
+            width: 110px;
+            padding: 10px;
+        }
+
+        i {
+            font-size: 5rem;
+        }
+    }
+    
+}

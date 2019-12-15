@@ -1,0 +1,115 @@
+// PROJECT STYLES
+
+.all-projects .section-title {
+    text-align: center;
+    font-family: $header-font;
+    font-size: 3.5rem;
+}
+
+.project {
+    height: auto;
+    display: flex;
+    padding: 50px 35px;
+    margin: 25px 0;
+
+    img {
+        width: 250px;
+        height: auto;
+    }
+
+    button {
+        margin-top: 30px;
+        padding: 5px 10px;
+        background: none;
+        border: none;
+        border-radius: 5px;
+        background: #f1f2f4;
+    }
+}
+
+.project-type {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    li {
+        padding: 5px 10px;
+        border-radius: 15px;
+        margin: 15px 15px 0px 15px;
+        font-size: 1.6rem;
+        background: #f1f2f4;
+        font-family: $tag-font;
+    }
+}
+
+.project-text {
+    padding: 15px;
+    margin-left: 20px;
+
+    .project-title {
+        margin-bottom: 20px;
+        font-size: 3.8rem;
+        font-family: $header-font;
+    }
+
+    a {
+        color: black;
+    }
+}
+
+.project1 {
+    background-color: rgba($color: $red, $alpha: 0.5)
+}
+
+.project2 {
+    background-color: rgba($color: $blue, $alpha: 0.5);
+    flex-direction: row-reverse;
+
+    .project-text {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+}
+.project3 {
+    background-color: rgba($color: $yellow, $alpha: 0.65);
+}
+.project4 {
+    background-color: rgba($color: $pink, $alpha: 0.5);
+    flex-direction: row-reverse;
+
+    .project-text {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+}
+
+.project5 {
+    background-color: rgba($color: $purple, $alpha: 0.5)
+}
+
+@media (max-width: 720px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .project-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+        
+        img {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .project {
+        padding: 30px 20px;
+    }
+
+    .project-text .project-title {
+        font-size: 3.2rem;
+    }
+}
