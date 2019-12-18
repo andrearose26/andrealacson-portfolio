@@ -36,6 +36,11 @@
     a {
         color: black
     }
+
+    a:hover,
+    a:focus {
+        color: $blue;
+    }
 }
 
 .contact form {

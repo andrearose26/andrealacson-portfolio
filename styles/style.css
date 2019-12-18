@@ -180,7 +180,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .site-title {
-  font-family: "Playfair Display", serif;
+  font-family: "Karla", sans-serif;
 }
 
 header nav {
@@ -191,6 +191,8 @@ header nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
 }
 
 header nav ul {
@@ -212,6 +214,25 @@ header nav ul li:last-of-type {
 
 header nav ul a {
   color: black;
+  height: 100%;
+  background: linear-gradient(45deg, #38d2d5 0%, rgba(56, 210, 213, 0.598459) 61%);
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-size: 100% 0px;
+  -webkit-transition: background-size .25s;
+  transition: background-size .25s;
+}
+
+header nav ul a:hover,
+header nav ul a:focus {
+  background-size: 100% 45%;
+}
+
+.full-nav {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  margin: 0 auto;
 }
 
 .hero {
@@ -220,6 +241,7 @@ header nav ul a {
 }
 
 .hero .wrapper {
+  padding-top: 125px;
   height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -239,10 +261,10 @@ header nav ul a {
   width: 70%;
 }
 
-.hero-text h3 {
-  font-family: "Playfair Display", serif;
+.hero-text h1 {
+  font-family: "Karla", sans-serif;
   margin-bottom: 15px;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 .hero-text p {
@@ -289,6 +311,15 @@ header nav ul a {
   }
 }
 
+@media (max-height: 640px) {
+  .full-nav {
+    position: static;
+  }
+  .hero .wrapper {
+    padding-top: 50px;
+  }
+}
+
 .skills-list {
   background: #0a1b4a;
   padding: 80px 60px;
@@ -299,7 +330,7 @@ header nav ul a {
 
 .skills .section-title {
   text-align: center;
-  font-family: "Playfair Display", serif;
+  font-family: "Karla", sans-serif;
   font-size: 3.5rem;
 }
 
@@ -356,6 +387,9 @@ header nav ul a {
 }
 
 @media (max-width: 475px) {
+  .skills-list {
+    padding: 50px 15px;
+  }
   .skills-list li {
     width: 110px;
     padding: 10px;
@@ -367,7 +401,7 @@ header nav ul a {
 
 .all-projects .section-title {
   text-align: center;
-  font-family: "Playfair Display", serif;
+  font-family: "Karla", sans-serif;
   font-size: 3.5rem;
 }
 
@@ -377,7 +411,7 @@ header nav ul a {
   display: -ms-flexbox;
   display: flex;
   padding: 50px 35px;
-  margin: 25px 0;
+  margin: 20px 0;
 }
 
 .project img {
@@ -388,45 +422,72 @@ header nav ul a {
 .project button {
   margin-top: 30px;
   padding: 5px 10px;
-  background: none;
   border: none;
   border-radius: 5px;
   background: #f1f2f4;
+}
+
+.project button:hover,
+.project button:focus {
+  background: #38D2D5;
+  -webkit-box-shadow: 3px 3px 4px -2px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 3px 4px -2px rgba(0, 0, 0, 0.75);
 }
 
 .project-type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 75%;
+  margin-bottom: 20px;
 }
 
 .project-type li {
   padding: 5px 10px;
-  border-radius: 15px;
-  margin: 15px 15px 0px 15px;
+  font-weight: bold;
+  margin-top: 15px;
   font-size: 1.6rem;
-  background: #f1f2f4;
   font-family: "Inconsolata", monospace;
+  background: rgba(241, 242, 244, 0.65);
+}
+
+.project-type li:first-child {
+  margin-left: 0px;
+}
+
+.project-type li:last-child {
+  margin-right: 0px;
+}
+
+.project-mobile-image {
+  margin-right: 30px;
 }
 
 .project-text {
   padding: 15px;
-  margin-left: 20px;
 }
 
 .project-text .project-title {
   margin-bottom: 20px;
   font-size: 3.8rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Karla", sans-serif;
 }
 
 .project-text a {
   color: black;
+}
+
+.links a:hover,
+.links a:focus {
+  color: rgba(56, 210, 213, 0.5);
 }
 
 .project1 {
@@ -441,9 +502,9 @@ header nav ul a {
           flex-direction: row-reverse;
 }
 
-.project2 .project-text {
-  margin-left: 0;
-  margin-right: 20px;
+.project2 .project-mobile-image {
+  margin-right: 0;
+  margin-left: 30px;
 }
 
 .project3 {
@@ -458,9 +519,9 @@ header nav ul a {
           flex-direction: row-reverse;
 }
 
-.project4 .project-text {
-  margin-left: 0;
-  margin-right: 20px;
+.project4 .project-mobile-image {
+  margin-right: 0;
+  margin-left: 20px;
 }
 
 .project5 {
@@ -474,7 +535,7 @@ header nav ul a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .project-image {
+  .project-mobile-image {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -485,10 +546,14 @@ header nav ul a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 25px;
+    margin: 0 0 25px 0;
   }
-  .project-image img {
+  .project-mobile-image img {
     width: 80%;
+  }
+  .project2 .project-mobile-image,
+  .project4 .project-mobile-image {
+    margin-left: 0;
   }
 }
 
@@ -559,6 +624,11 @@ header nav ul a {
   color: black;
 }
 
+.contact-info a:hover,
+.contact-info a:focus {
+  color: #38D2D5;
+}
+
 .contact form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -622,6 +692,7 @@ textarea {
 
 footer {
   background-color: #0a1b4a;
+  height: 10vh;
 }
 
 footer .wrapper {
@@ -631,35 +702,22 @@ footer .wrapper {
   color: white;
 }
 
-.about-page .hero {
-  height: 35vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
-}
-
 .about-section .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 75px auto 50px auto;
-  padding: 25px;
-  height: auto;
+  margin: 0px auto 50px auto;
+  padding: 100px 25px 25px 25px;
+  min-height: 75vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .about-image {
-  width: 30%;
+  width: 25%;
   margin-right: 50px;
 }
 
@@ -668,39 +726,19 @@ footer .wrapper {
 }
 
 .about-text {
-  width: 70%;
-  background-color: rgba(229, 9, 178, 0.55);
+  width: 75%;
   color: black;
   padding: 20px 25px;
 }
 
 .about-text h2,
 .about-text h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "Karla", sans-serif;
   margin-bottom: 15px;
 }
 
 .about-text p {
   margin-bottom: 15px;
-}
-
-.resume-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.resume-section button {
-  border: none;
-  padding: 10px 15px;
-  background: #e509b2;
-}
-
-.resume-section a {
-  color: white;
 }
 
 @media (max-width: 1000px) {
@@ -722,15 +760,9 @@ footer .wrapper {
   }
   .about-section .wrapper {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media (max-width: 675px) {
-  .about-image {
-    width: 100%;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 
@@ -742,19 +774,20 @@ footer .wrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-image: none;
   margin-bottom: 25px;
+  height: 25vh;
 }
 
 .project-page .hero .page-title {
   font-size: 3rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Karla", sans-serif;
   margin-bottom: 15px;
 }
 
@@ -770,6 +803,21 @@ footer .wrapper {
   margin-bottom: 35px;
 }
 
+.hero .links {
+  margin-top: 15px;
+}
+
+.hero .links a {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+@media (max-height: 640px) {
+  .project-page .hero {
+    height: 15vh;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -777,6 +825,15 @@ html {
 body {
   font-family: "Inconsolata", monospace;
   font-size: 1.8rem;
+  opacity: 1;
+  -webkit-transition: 1s opacity;
+  transition: 1s opacity;
+}
+
+body.fade-out {
+  opacity: 0;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .wrapper {
@@ -823,7 +880,7 @@ img {
   display: inline-block;
   border-bottom: 1px solid black;
   padding: 10px;
-  font-family: "Playfair Display", serif;
+  font-family: "Karla", sans-serif;
 }
 
 .skills,

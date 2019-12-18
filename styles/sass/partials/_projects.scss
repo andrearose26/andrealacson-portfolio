@@ -10,7 +10,7 @@
     height: auto;
     display: flex;
     padding: 50px 35px;
-    margin: 25px 0;
+    margin: 20px 0;
 
     img {
         width: 250px;
@@ -20,31 +20,47 @@
     button {
         margin-top: 30px;
         padding: 5px 10px;
-        background: none;
         border: none;
         border-radius: 5px;
         background: #f1f2f4;
+    }
+
+    button:hover,
+    button:focus {
+        background: $blue;
+        box-shadow: 3px 3px 4px -2px rgba(0,0,0,0.75);
     }
 }
 
 .project-type {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    width: 75%;
+    margin-bottom: 20px;
     
     li {
         padding: 5px 10px;
-        border-radius: 15px;
-        margin: 15px 15px 0px 15px;
+        font-weight: bold;
+        margin-top: 15px;
         font-size: 1.6rem;
-        background: #f1f2f4;
-        font-family: $tag-font;
+        font-family: $base-font;
+        background: rgba($color: #f1f2f4, $alpha: 0.65);
+    }
+
+    li:first-child {
+        margin-left: 0px;
+    }
+    li:last-child {
+        margin-right: 0px;
     }
 }
-
+.project-mobile-image {
+    margin-right: 30px;
+}
 .project-text {
     padding: 15px;
-    margin-left: 20px;
 
     .project-title {
         margin-bottom: 20px;
@@ -57,6 +73,11 @@
     }
 }
 
+.links a:hover,
+.links a:focus {
+    color: rgba($color: $blue, $alpha: 0.5)
+}
+
 .project1 {
     background-color: rgba($color: $red, $alpha: 0.5)
 }
@@ -65,9 +86,9 @@
     background-color: rgba($color: $blue, $alpha: 0.5);
     flex-direction: row-reverse;
 
-    .project-text {
-        margin-left: 0;
-        margin-right: 20px;
+    .project-mobile-image {
+        margin-right: 0;
+        margin-left: 30px;
     }
 }
 .project3 {
@@ -77,9 +98,9 @@
     background-color: rgba($color: $pink, $alpha: 0.5);
     flex-direction: row-reverse;
 
-    .project-text {
-        margin-left: 0;
-        margin-right: 20px;
+    .project-mobile-image {
+        margin-right: 0;
+        margin-left: 20px;
     }
 }
 
@@ -92,15 +113,20 @@
         flex-direction: column;
     }
 
-    .project-image {
+    .project-mobile-image {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 25px;
+        margin: 0 0 25px 0;
         
         img {
             width: 80%;
         }
+    }
+
+    .project2 .project-mobile-image,
+    .project4 .project-mobile-image {
+        margin-left:0;
     }
 }
 

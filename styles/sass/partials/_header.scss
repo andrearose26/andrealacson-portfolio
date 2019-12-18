@@ -7,6 +7,8 @@ header nav {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    background: rgba($color: white, $alpha: 0.8);
+    width: 100%;
 
     ul {
         display: flex;
@@ -22,8 +24,27 @@ header nav {
 
         a {
             color: black;
+            height: 100%;   
+            background: linear-gradient(45deg, rgba(56,210,213,1) 0%, rgba(56,210,213,0.598459366656819) 61%); 
+            background-repeat: no-repeat;
+            background-position: 0% 100%;
+            background-size: 100% 0px;
+            transition: background-size .25s;
+        }
+
+
+        a:hover,
+        a:focus {
+            background-size: 100% 45%;
         }
     }
+}
+
+.full-nav {
+    position: fixed;
+    background: rgba($color: white, $alpha: 0.8);
+    width: 100%;
+    margin: 0 auto;
 }
 
 // HERO STYLES
@@ -33,6 +54,7 @@ header nav {
     background-size: cover;
     
     .wrapper {
+        padding-top: 125px;
         height: 90vh;
         display:flex;
         justify-content: space-between;
@@ -46,10 +68,10 @@ header nav {
     font-weight: normal;
     width: 70%;
     
-    h3 {
+    h1 {
         font-family: $header-font;
         margin-bottom: 15px;
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     p {
@@ -89,5 +111,15 @@ header nav {
     .hero-text {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media(max-height: 640px) {
+    .full-nav {
+        position: static;
+    }
+
+    .hero .wrapper {
+        padding-top: 50px;
     }
 }

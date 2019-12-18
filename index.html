@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/png" href="/favicon.png" />
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:400,700|Playfair+Display&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Karla:400,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ea3bd90823.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -15,21 +14,23 @@
 <body>
     
     <header id="main-page">
-        <div class="wrapper">
-            <nav>
-                <h3 class="site-title"><a href="#main-page">Andrea Lacson</a></h3>
-                <ul>
-                    <li>
-                        <a href="#all-projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+        <div class="full-nav">
+            <div class="wrapper">
+                <nav>
+                    <h3 class="site-title"><a href="#main-page">Andrea Lacson</a></h3>
+                    <ul>
+                        <li>
+                            <a href="#all-projects">Projects</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         
         <div class="hero">
@@ -38,7 +39,7 @@
                     <img src="assets/andrea-sitting.png" alt="Vector image of Andrea in a pink hoodie and black pants, sitting on a cube.">
                 </div>
                 <div class="hero-text">
-                    <h3>Hi! I'm Andrea.</h3>
+                    <h1><span class="highlight-blue">Hi, I'm Andrea.</span></h1>
                     <p>I'm a front end developer, currently based in Toronto. I used to work with book metadata, but now I work with code. I'm passionate about Javascript, diversity, and books.</p>
                 </div>
             </div>
@@ -47,10 +48,103 @@
     
     <div class="wrapper">
         <main>
+
+            <section class="all-projects" id ="all-projects">
+                <h2 class='section-title'><em>Projects</em></h2>
+                <section class="project project1">
+                    <div class="project-mobile-image">
+                        <img src="assets/diverselit-mobile.png" alt="">
+                    </div>
+                    
+                    <div class="project-text">
+                        <div class="links">
+                            <a href="https://andrearose26.github.io/DiverseLit/" target="_blank" aria-label="Go to Diverse Lit's Live Link"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/andrearose26/DiverseLit" target="_blank" aria-label="Go to Diverse Lit's Git Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3 class="project-title"><span class="highlight-pink">Diverse Lit</span></h3>
+                            <ul class="project-type">
+                                <li class="highlight-blue">React</li>
+                                <li>React Router</li>
+                                <li>using APIs</li>
+                                <li>SCSS</li>
+                            </ul>
+                        <p class="project-short-description">As a former bookseller, customers frequently asked me for books by authors that looked like them. DiverseLit solves this problem, by helping people filter through books by Asian, Black, Indigenous, and Latinx authors. </p>
+                        <button>
+                            <a href="projects/diverse-lit.html">Read More</a>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="project project2">
+                    <div class="project-mobile-image">
+                        <img src="assets/bowserbash-mobile.png" alt="">
+                    </div>
+                    <div class="project-text">
+                        <div class="links">
+                            <a href="http://www.andrealacson.com/BowserBash/" target="_blank" aria-label="Go to Bowser Bash's Live Link"><i class="fas fa-link" ></i></a>
+                            <a href="https://github.com/andrearose26/BowserBash" target="_blank" aria-label="Go to Bowser Bash's Git Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3 class="project-title"><span class="highlight-pink">Bowser Bash</span></h3>
+                        <ul class="project-type">
+                            <li>jQuery</li>
+                        </ul>
+                        <p class="project-short-description">If you've ever been on Neopets, you may have played National Neopian. Bowser Bash is a Neopets inspired game, featuring characters from Super Mario. User catches Bowser with keyboard presses, as game speeds up and other characters begin to appear.</p>
+                        <button>
+                            <a href="projects/bowser-bash.html">Read More</a>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="project project3">
+                    <div class="project-mobile-image">
+                        <img src="assets/gifmeamovie-mobile.png" alt="">
+                    </div>
+                    <div class="project-text">
+                        <div class="links">
+                            <a href="https://team-outofcontext.github.io/movieSpoilerProjectSix/" target="_blank" aria-label="Go to Gif Me A Movie's Live Link"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/Team-OutOfContext/movieSpoilerProjectSix" target="_blank" aria-label="Go to Gif Me a Movie's Git Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3 class="project-title"><span class="highlight-pink">Gif Me A Movie</span></h3>
+                        <ul class="project-type">
+                            <li>React</li>
+                            <li>REST APIs</li>
+                            <li>SCSS</li>
+                        </ul>
+                        <p class="project-short-description">A collaborative project with Vipin Kirthane, Yiying Zou, and Andrew Alexander. The user enters in a movie and recieves gifs related to the movie. Uses the MovieDB API and the Giphy API.</p>
+                        <button>
+                            <a href="projects/gif-me-a-movie.html">Read More</a>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="project project4">
+                    <div class="project-mobile-image">
+                        <img src="assets/shoekloset-mobile.png" alt="">
+                    </div>
+                    
+                    <div class="project-text">
+                        <div class="links">
+                            <i class="fab fa-github"><a href="https://github.com/andrearose26/MultiPagePSDConversion" target="_blank" aria-label="Go to PSD Conversion's Git Repository"></a></i>
+                        </div>
+                        <h3 class="project-title"><span class="highlight-pink">Multi Page PSD Conversion</span></h3>
+                        <ul class="project-type">
+                            <li>SCSS</li>
+                            <li>Grids</li>
+                            <li>Flexbox</li>
+                            <li>HTML5</li>
+                        </ul>
+                        <p class="project-short-description">A multi page PSD conversion using HTML, SCSS, grids, and flexbox. Site is made fully responsive. </p>
+                        <button>
+                            <a href="projects/shoe-kloset.html">Read More</a>
+                        </button>
+                    </div>
+                </section>  
+            </section>
+
             <section class="skills">
-
+            
                 <h2 class='section-title'><em>Skills</em></h2>
-
+            
                 <ul class="skills-list">
                     <li>
                         <i class="fab fa-html5"></i>
@@ -94,122 +188,8 @@
                     </li>
                 </ul>
             </section>
-
-            <section class="all-projects" id ="all-projects">
-                <h2 class='section-title'><em>Projects</em></h2>
-                <section class="project project1">
-                    <div class="project-image">
-                        <img src="assets/diverselit-mobile.png" alt="">
-                        <ul class="project-type">
-                            <li>React</li>
-                            <li>React Router</li>
-                            <li>using APIs</li>
-                            <li>SCSS</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-text">
-                        <div class="links">
-                            <a href="https://andrearose26.github.io/DiverseLit/"><i class="fas fa-link"></i></a>
-                            <a href="https://github.com/andrearose26/DiverseLit"><i class="fab fa-github"></i></a>
-                        </div>
-                        <h3 class="project-title"><span class="highlight-pink">Diverse Lit</span></h3>
-                        <p class="project-short-description">As a former bookseller, customers frequently asked me for books by authors that looked like them. DiverseLit solves this problem, by helping people filter through books by Asian, Black, Indigenous, and Latinx authors. </p>
-                        <button>
-                            <a href="projects/diverse-lit.html">Read More</a>
-                        </button>
-                    </div>
-                </section>
-
-                <section class="project project2">
-                    <div class="project-image">
-                        <img src="assets/bowserbash-mobile.png" alt="">
-                        <ul class="project-type">
-                            <li>Javascript</li>
-                            <li>jQuery</li>
-                        </ul>
-                    </div>
-                    <div class="project-text">
-                        <div class="links">
-                            <a href="http://www.andrealacson.com/BowserBash/"><i class="fas fa-link"></i></a>
-                            <a href="https://github.com/andrearose26/BowserBash"><i class="fab fa-github"></i></a>
-                        </div>
-                        <h3 class="project-title"><span class="highlight-pink">Bowser Bash</span></h3>
-                        <p class="project-short-description">If you've ever been on Neopets, you may have played National Neopian. Bowser Bash is a Neopets inspired game, featuring characters from Super Mario. User catches Bowser with keyboard presses, as game speeds up and other characters begin to appear.</p>
-                        <button>
-                            <a href="projects/bowser-bash.html">Read More</a>
-                        </button>
-                    </div>
-                </section>
-
-                <section class="project project3">
-                    <div class="project-image">
-                        <img src="assets/gifmeamovie-mobile.png" alt="">
-                        <ul class="project-type">
-                            <li>React</li>
-                            <li>REST APIs</li>
-                            <li>SCSS</li>
-                        </ul>
-                    </div>
-                    <div class="project-text">
-                        <div class="links">
-                            <a href="https://team-outofcontext.github.io/movieSpoilerProjectSix/"><i class="fas fa-link"></i></a>
-                            <a href="https://github.com/Team-OutOfContext/movieSpoilerProjectSix"><i class="fab fa-github"></i></a>
-                        </div>
-                        <h3 class="project-title"><span class="highlight-pink">Gif Me A Movie</span></h3>
-                        <p class="project-short-description">A collaborative project with Vipin Kirthane, Yiying Zou, and Andrew Alexander. The user enters in a movie and recieves gifs related to the movie. Uses the MovieDB API and the Giphy API.</p>
-                        <button>
-                            <a href="projects/gif-me-a-movie.html">Read More</a>
-                        </button>
-                    </div>
-                </section>
-
-                <!-- <section class="project project5">
-                    <div class="project-image">
-                        <img src="assets/diverselit-mobile.png" alt="">
-                        <ul class="project-type">
-                            <li class="react">JavaScript</li>
-                            <li>Rest APIs</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-text">
-                        <div class="links">
-                            <i class="fas fa-link"></i>
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <h3 class="project-title"><span class="highlight-pink">Weather App</span></h3>
-                        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore tenetur provident?</p>
-                        <button>
-                            <a href="">Read More</a>
-                        </button>
-                    </div>
-                </section> -->
-
-                <section class="project project4">
-                    <div class="project-image">
-                        <img src="assets/shoekloset-mobile.png" alt="">
-                        <ul class="project-type">
-                            <li>SCSS</li>
-                            <li>Grids</li>
-                            <li>Flexbox</li>
-                            <li>HTML5</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-text">
-                        <div class="links">
-                            <i class="fab fa-github"><a href="https://github.com/andrearose26/MultiPagePSDConversion"></a></i>
-                        </div>
-                        <h3 class="project-title"><span class="highlight-pink">Multi Page PSD Conversion</span></h3>
-                        <p class="project-short-description">A multi page PSD conversion using HTML, SCSS, grids, and flexbox. Site is made fully responsive. </p>
-                        <button>
-                            <a href="projects/shoe-kloset.html">Read More</a>
-                        </button>
-                    </div>
-                </section>  
-            </section>
         </div>
+        
 
             <section class="contact">
 
@@ -259,5 +239,8 @@
                 <p>Designed and coded by Andrea Lacson</p>
             </div>
         </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="script.js"></script>
     </body>
     </html>

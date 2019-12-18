@@ -2,10 +2,11 @@
 
      display: flex;
      flex-direction: column;
-     justify-content: center;
+     justify-content: flex-end;
      align-items: center;
      background-image: none;
      margin-bottom: 25px;
+     height: 25vh;
      .page-title {
          font-size: 3rem;
          font-family: $header-font;
@@ -24,4 +25,20 @@
 .project-image,
 .project-description {
     margin-bottom: 35px;
+}
+
+.hero .links {
+    margin-top: 15px;
+
+    a {
+        border: 1px solid black;
+        padding: 5px;
+    }
+}
+
+
+@media(max-height: 640px) {
+    .project-page .hero {
+        height: 15vh;
+    }
 }
