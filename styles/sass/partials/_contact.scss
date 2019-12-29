@@ -34,7 +34,8 @@
     }
 
     a {
-        color: black
+        color: black;
+        transition: all 0.3s ease-in-out;
     }
 
     a:hover,

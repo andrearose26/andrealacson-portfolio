@@ -1,5 +1,0 @@
-To Do
-- Add smooth scroll
-- Add subtle hover animations
-- Shorten descriptions
-- Change description titles
