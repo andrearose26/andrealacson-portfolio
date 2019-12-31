@@ -38,6 +38,24 @@
     }
 }
 
+.resume {
+    margin: 0 auto;
+    text-align: center;
+
+    button {
+        background-color: $blue;
+        padding: 10px 15px;
+        border: none;
+        transition: all 0.3s ease-in-out;
+        background: $blue;
+    }
+    
+    button:hover,
+    button:focus {
+        background: rgba($color: $red, $alpha: 0.5);
+    }
+}
+
 @media (max-width: 1000px) {
     .about-image {
         width: 40%;
