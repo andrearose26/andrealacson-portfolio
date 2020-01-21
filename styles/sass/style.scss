@@ -61,6 +61,15 @@ img {
     background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #38d2d5 50%);
 }
 
+.come-in {
+    transform: translateY(150px);
+    animation: come-in 0.8s ease forwards;
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+
 .section-title {
     margin: 25px auto;
     display: inline-block;

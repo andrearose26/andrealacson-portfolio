@@ -902,6 +902,10 @@ img {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #38d2d5 50%);
 }
 
+.fadein {
+  opacity: 0;
+}
+
 .section-title {
   margin: 25px auto;
   display: inline-block;
