@@ -487,6 +487,10 @@ header nav ul a:focus {
   color: black;
 }
 
+.project-text .groupMember {
+  font-weight: bold;
+}
+
 .links a:hover,
 .links a:focus {
   color: rgba(56, 210, 213, 0.5);
@@ -700,13 +704,15 @@ textarea {
 
 footer {
   background-color: #0a1b4a;
-  height: 10vh;
-}
-
-footer .wrapper {
+  height: 5vh;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   text-align: center;
-  padding: 20px;
-  margin-top: 35px;
+  padding: 30px;
+  margin-top: 50px;
   color: white;
 }
 
@@ -716,7 +722,7 @@ footer .wrapper {
   display: flex;
   margin: 0px auto 50px auto;
   padding: 100px 25px 25px 25px;
-  min-height: 75vh;
+  min-height: 80vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -847,6 +853,7 @@ footer .wrapper {
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
@@ -855,6 +862,9 @@ body {
   opacity: 1;
   -webkit-transition: 1s opacity;
   transition: 1s opacity;
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 6rem;
 }
 
 body.fade-out {
@@ -902,8 +912,25 @@ img {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #38d2d5 50%);
 }
 
-.fadein {
-  opacity: 0;
+.come-in {
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  -webkit-animation: come-in 0.8s ease forwards;
+          animation: come-in 0.8s ease forwards;
+}
+
+@-webkit-keyframes come-in {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes come-in {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .section-title {

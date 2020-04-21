@@ -10,6 +10,7 @@
 
 html {
     font-size: 62.5%;
+    height: 100%;
 }
 
 body {
@@ -17,6 +18,9 @@ body {
     font-size: 1.8rem;
     opacity: 1;
     transition: 1s opacity;
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 6rem;
 }
 
 body.fade-out {
